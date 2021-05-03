@@ -21,7 +21,7 @@
 * Node.js
 * MongoDB with Mongoose
 * TypeScript
-* Express & express middleware
+* Express & Express middleware
 
 ## Video structure
 1. What are we going to build
