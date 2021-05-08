@@ -1,12 +1,12 @@
 # Build a REST API with Node.js, Mongoose & TypeScript
 
-Note: This repository includes the [postman collection for the finished API](./REST API Tutorial.postman_collection.json)
+Note: This repository includes the [postman collection for the finished API](postman_collection.json)
 
 ## Who is this tutorial for?
 * Junior to mid-level developers
 * Anyone interested in building REST APIs with TypeScript
 
-## Why?
+s## Why?
 * REST APIs are the staple of the web development industry
 * Knowing how REST APIs is important for both back and frontend developers
 * There's no better way to understand how they work than to build one
