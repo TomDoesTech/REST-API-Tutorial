@@ -1,5 +1,8 @@
 # Build a REST API with Node.js, Mongoose & TypeScript
 
+Article: https://tomanagle.medium.com/build-a-rest-api-with-node-js-typescript-mongodb-b6c898d70d61
+Video: https://youtu.be/goUbHgAzPCs
+
 Note: This repository includes the [postman collection for the finished API](postman_collection.json)
 
 ## Who is this tutorial for?
