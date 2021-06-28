@@ -9,7 +9,7 @@ Note: This repository includes the [postman collection for the finished API](pos
 * Junior to mid-level developers
 * Anyone interested in building REST APIs with TypeScript
 
-s## Why?
+## Why?
 * REST APIs are the staple of the web development industry
 * Knowing how REST APIs is important for both back and frontend developers
 * There's no better way to understand how they work than to build one
