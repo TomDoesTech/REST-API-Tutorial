@@ -1,10 +1,10 @@
 import { Express, Request, Response } from "express";
 import {
-  createProductHandler,
-  updateProductHandler,
-  getProductHandler,
-  deleteProductHandler,
-} from "./controller/product.controller";
+  createPostHandler,
+  updatePostHandler,
+  getPostHandler,
+  deletePostHandler,
+} from "./controller/post.controller";
 import { createUserHandler } from "./controller/user.controller";
 import {
   createUserSessionHandler,
@@ -17,11 +17,10 @@ import {
   createUserSessionSchema,
 } from "./schema/user.schema";
 import {
-  createProductSchema,
-  updateProductSchema,
-  deleteProductSchema,
-  readProductSchema,
-} from "./schema/product.schema";
+  createPostSchema,
+  updatePostSchema,
+  deletePostSchema,
+} from "./schema/post.schema";
 
 export default function (app: Express) {
   app.get("/healthcheck", (req: Request, res: Response) => res.sendStatus(200));
@@ -42,31 +41,27 @@ export default function (app: Express) {
   // Logout
   app.delete("/api/sessions", requiresUser, invalidateUserSessionHandler);
 
-  // Create a product
+  // Create a post
   app.post(
-    "/api/products",
-    [requiresUser, validateRequest(createProductSchema)],
-    createProductHandler
+    "/api/posts",
+    [requiresUser, validateRequest(createPostSchema)],
+    createPostHandler
   );
 
-  // Update a product
+  // Update a post
   app.put(
-    "/api/products/:productId",
-    [requiresUser, validateRequest(updateProductSchema)],
-    updateProductHandler
+    "/api/posts/:postId",
+    [requiresUser, validateRequest(updatePostSchema)],
+    updatePostHandler
   );
 
-  // Get a product
-  app.get(
-    "/api/products/:productId",
-    validateRequest(readProductSchema),
-    getProductHandler
-  );
+  // Get a post
+  app.get("/api/posts/:postId", getPostHandler);
 
-  // Delete a product
+  // Delete a post
   app.delete(
-    "/api/products/:productId",
-    [requiresUser, validateRequest(deleteProductSchema)],
-    deleteProductHandler
+    "/api/posts/:postId",
+    [requiresUser, validateRequest(deletePostSchema)],
+    deletePostHandler
   );
 }

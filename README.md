@@ -18,44 +18,23 @@ Note: This repository includes the [postman collection for the finished API](pos
 * REST API principals
     * CRUD
     * HTTP methods
+    * What REST is and is not
+
 * JWT & refresh tokens
-* Request validation
+
 ## Technologies
 * Node.js
 * MongoDB with Mongoose
 * TypeScript
 * Express.js & Express.js middleware
-* Zod validation
 
 ## Video structure
 1. What are we going to build
 2. Bootstrap application
-   1. Setup express JS
-   2. Create routes function
-   3. Setup database connection
-   4. Setup logger
-   5. Validate request middleware
-3. Registration
-   1. Create user model
-   2. Create user endpoint
-   3. Create user session
-   4. Deserialize user middleware (refresh tokens)
-   5. Get sessions
-   6. Delete session
-   7. Require user middleware
-4. Product resource
-   1. Create product model
-   2. Create product
-   3. Read product
-   4. Update product
-   5. Delete product
-
-
-
-
+4. Build out registration
+5. Build out post CRUD operations
 
 ![](./diagram.png)
-
 
 ## Support
 [Buy me a Coffee](https://www.buymeacoffee.com/tomn)
