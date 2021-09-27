@@ -1,4 +1,3 @@
-import { get } from "lodash";
 import { Request, Response, NextFunction } from "express";
 
 const requiresUser = async (
@@ -6,7 +5,7 @@ const requiresUser = async (
   res: Response,
   next: NextFunction
 ) => {
-  const user = get(req, "user");
+  const user = res.locals.user;
 
   if (!user) {
     return res.sendStatus(403);

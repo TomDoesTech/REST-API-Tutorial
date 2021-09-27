@@ -20,8 +20,8 @@ const deserializeUser = async (
   const { decoded, expired } = decode(accessToken);
 
   if (decoded) {
-    // @ts-ignore
-    req.user = decoded;
+    // Set the user object
+    res.locals.user = decoded;
 
     return next();
   }

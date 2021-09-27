@@ -1,5 +1,4 @@
 import config from "config";
-import { get } from "lodash";
 import { Request, Response } from "express";
 import { validatePassword } from "../service/user.service";
 import {
@@ -40,7 +39,7 @@ export async function invalidateUserSessionHandler(
   req: Request,
   res: Response
 ) {
-  const sessionId = get(req, "user.session");
+  const sessionId = res.locals.user.session;
 
   await updateSession({ _id: sessionId }, { valid: false });
 
@@ -48,7 +47,7 @@ export async function invalidateUserSessionHandler(
 }
 
 export async function getUserSessionsHandler(req: Request, res: Response) {
-  const userId = get(req, "user._id");
+  const userId = res.locals.user._id;
 
   const sessions = await findSessions({ user: userId, valid: true });
 
