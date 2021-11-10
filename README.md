@@ -1,5 +1,9 @@
 # Build a REST API with Node.js, Mongoose & TypeScript
 
+Note: This repository and video has been recreated
+- New repository: https://github.com/TomDoesTech/REST-API-Tutorial-Updated
+- New video: https://www.youtube.com/watch?v=BWUi6BS9T5Y
+
 Article: https://tomanagle.medium.com/build-a-rest-api-with-node-js-typescript-mongodb-b6c898d70d61
 Video: https://youtu.be/goUbHgAzPCs
 
